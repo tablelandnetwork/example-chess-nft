@@ -1,3 +1,4 @@
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
@@ -77,12 +78,15 @@ export default {
       browser: true,
       dedupe: ['svelte']
     }),
+
     commonjs(),
     typescript({
       resolveJsonModule: true,
       sourceMap: !production,
       inlineSources: !production
     }),
+
+    nodePolyfills(),
 
     json(),
 

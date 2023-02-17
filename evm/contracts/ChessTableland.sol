@@ -33,7 +33,7 @@ library ChessTableland {
          *  CREATE TABLE chess_token_<chainId> (
          *      id INTEGER PRIMARY KEY,
          *      conceded INT,
-         *      bounty REAL,
+         *      bounty TEXT,
          *      thumb TEXT,
          *      image TEXT,
          *      animation_url TEXT
@@ -49,7 +49,7 @@ library ChessTableland {
                 "(",
                 " id INTEGER PRIMARY KEY,",
                 " conceded INT,",
-                " bounty REAL,",
+                " bounty TEXT,",
                 " thumb TEXT,",
                 " image TEXT,",
                 " animation_url TEXT",
@@ -160,7 +160,7 @@ library ChessTableland {
             self._metadataTable,
             " (id, conceded, bounty, thumb, image, animation_url) VALUES (",
             tokenIdString, ",",
-            "0,0,", // set conceded and bounty to default of 0
+            "0,'0',", // set conceded and bounty to default of 0
             // Default images are on IPFS for thumb and image
             "'ipfs://bafkreifiaqt3pfoir56owfr5ess4b6vhxeytpallik4oacnuyc5abtrjdy',",
             "'ipfs://bafkreifiaqt3pfoir56owfr5ess4b6vhxeytpallik4oacnuyc5abtrjdy',",

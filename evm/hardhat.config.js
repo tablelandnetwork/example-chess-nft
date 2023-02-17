@@ -83,17 +83,17 @@ module.exports = {
   },
   baseURIs: {
     // mainnets
-    ethereum: "https://tableland.network/query?s=",
-    optimism: "https://tableland.network/query?s=",
-    polygon: "https://tableland.network/query?s=",
+    ethereum: "https://tableland.network/api/v1/query?statement=",
+    optimism: "https://tableland.network/api/v1/query?statement=",
+    polygon: "https://tableland.network/api/v1/query?statement=",
     // testnets
-    "ethereum-goerli": "https://testnet.tableland.network/query?s=",
-    "optimism-kovan": "https://testnet.tableland.network/query?s=",
-    "polygon-mumbai": "https://testnet.tableland.network/query?s=",
+    "ethereum-goerli": "https://testnets.tableland.network/api/v1/query?statement=",
+    "optimism-kovan": "https://testnets.tableland.network/api/v1/query?statement=",
+    "polygon-mumbai": "https://testnets.tableland.network/api/v1/query?statement=",
     // devnets
     "optimism-kovan-staging":
-      "https://staging.tableland.network/query?s=",
-    localhost: "http://localhost:8080/query?s=",
+      "https://staging.tableland.network/api/v1/query?statement=",
+    localhost: "http://localhost:8080/api/v1/query?statement=",
   },
   appURIs: {
     // mainnets
