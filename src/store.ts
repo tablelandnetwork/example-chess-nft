@@ -2,7 +2,7 @@ import { ethers, BigNumber } from 'ethers';
 import { tick } from 'svelte';
 import { writable, derived } from 'svelte/store';
 import type { Writable } from "svelte/store";
-import { connect, ConnectOptions, ChainName } from '@tableland/sdk';
+import { Database } from '@tableland/sdk';
 import chessToken from '../evm/artifacts/contracts/ChessToken.sol/ChessToken.json';
 
 /*
@@ -442,7 +442,7 @@ export const init = async function () {
       chain: TABLELAND_NETWORK
     };
 
-    _tableland = connect(connectParams);
+    _tableland = new Database(connectParams);
     await _tableland.siwe();
 
     if (!_tableland.token?.token) return;

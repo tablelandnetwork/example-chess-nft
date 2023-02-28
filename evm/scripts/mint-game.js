@@ -1,8 +1,9 @@
 const { network, ethers } = require("hardhat");
-const chessToken = require('../artifacts/contracts/ChessToken.sol/ChessToken.json');
+const chessToken = require("../artifacts/contracts/ChessToken.sol/ChessToken.json");
 const tokenAbi = chessToken.abi;
 
-const TOKEN_CONTRACT_ADDRESS = '0x71C95911E9a5D330f4D621842EC243EE1343292e';
+const TOKEN_CONTRACT_ADDRESS = "0x71c95911e9a5d330f4d621842ec243ee1343292e";
+//const TOKEN_CONTRACT_ADDRESS = "0x712516e61c8b383df4a63cfe83d7701bce54b03e";
 
 const get = async function () {
   const isLocalhost = network.name === "localhost";
